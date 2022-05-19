@@ -9,13 +9,20 @@
 
     <!-- Define your beans here -->
     
-    <bean id="myFortune"
+    <bean id="myFortuneService"
     	class="com.chris.springproject.HappyFortuneService"></bean>
     
     <bean id="myCoach"
     	class="com.chris.springproject.TrackCoach">
     	
-    	<constructor-arg ref="myFortune"/>
+    	<constructor-arg ref="myFortuneService"/>
+    </bean>
+    
+    <bean id="myCricketCoach"
+    	class="com.chris.springproject.CricketCoach">
+    	
+    	<!-- set up setter injection -->
+    	<property name="fortuneService" ref="myFortuneService"/>
     </bean>
     
 </beans>
