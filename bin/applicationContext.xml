@@ -23,7 +23,13 @@
     	
     	<!-- set up setter injection -->
     	<property name="fortuneService" ref="myFortuneService"/>
+    	
+    	<!-- inject literal values -->
+    	<property name="emailAddress" value="thebasecoch@gmail.com"/>
+    	<property name="team" value="Sunrisers Hyderaboard"/>
     </bean>
+    
+    
     
 </beans>
 
