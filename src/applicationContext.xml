@@ -12,8 +12,9 @@
 
     <!-- Define your beans here -->
     
+    	
     <bean id="myFortuneService"
-    	class="com.chris.springproject.HappyFortuneService"></bean>
+    	class="com.chris.springproject.RandomFortuneService"></bean>
     
     <bean id="myCoach"
     	class="com.chris.springproject.TrackCoach">
@@ -30,6 +31,12 @@
     	<!-- inject literal values -->
     	<property name="emailAddress" value="${foo.email}"/>
     	<property name="team" value="${foo.team}"/>
+    </bean>
+    
+    <bean id="myGolfCoach"
+    	class="com.chris.springproject.GolfCoach">
+    	
+    	<constructor-arg ref="myFortuneService"/>
     </bean>
     
     
