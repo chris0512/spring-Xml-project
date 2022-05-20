@@ -15,7 +15,8 @@
     	class="com.chris.springproject.RandomFortuneService"></bean>
     
     <bean id="myCoach"
-    	class="com.chris.springproject.TrackCoach">
+    	class="com.chris.springproject.TrackCoach"
+    	scope="prototype">
     	
     	<constructor-arg ref="myFortuneService"/>
     </bean>
