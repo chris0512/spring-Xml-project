@@ -14,8 +14,9 @@
     <bean id="myFortuneService"
     	class="com.chris.springproject.RandomFortuneService"></bean>
     
-    <bean id="myCoach"
-    	class="com.chris.springproject.TrackCoach">
+    <bean id="myGolfCoach"
+    	class="com.chris.springproject.GolfCoach"
+    	scope="prototype">
     	
     	<constructor-arg ref="myFortuneService"/>
     </bean>
